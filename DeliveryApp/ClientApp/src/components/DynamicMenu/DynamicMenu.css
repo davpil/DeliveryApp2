@@ -1,0 +1,81 @@
+﻿.show-grid {
+    padding: 0;
+}
+
+.show-grid2 {
+    height: 100%;
+}
+
+.item-list {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+    .item-list .list-group-item {
+        cursor: pointer;
+        height: 58px;
+        background-color: #3D3D3D;
+        border-radius: 17px 15px 15px 17px;
+        padding: 0px;
+        display: flex;
+        border: 0px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+        .item-list .list-group-item:hover {
+            background-color: #FFE168;
+        }
+
+    .item-list a {
+        font-size: 16px;
+        color: #FFE168;
+        text-decoration: none;
+        font-family: Malgun Gothic, Bold;
+        padding: 0px;
+    }
+
+        .item-list a:hover {
+            color: #3D3D3D;
+        }
+
+.LeftMenu {
+    background-color: #9A9A9A;
+    height: 100%;
+    display: block;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.icon {
+    width: 58px;
+    height: 100%;
+    background-color: #808080;
+    border-radius: 15px;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.MenuList {
+    padding: 0px;
+}
+
+.list-group-item-name {
+    margin-top: 18px;
+}
+
+.item-list .active {
+    background: #FFE168;
+    color: #3D3D3D;
+    font-family: Malgun Gothic, Bold;
+}
+
+    .item-list .active:hover {
+        background: #FFE168;
+        color: #3D3D3D;
+    }
+
+.btn-danger {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+}
