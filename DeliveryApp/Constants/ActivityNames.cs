@@ -29,5 +29,12 @@ namespace DeliveryApp.Constants
         public const string EmployeeEd = "Employee Edit";
         public const string EmployeeDel = "Employee Delete";
         public const string EmployeeDet = "Employee Details";
+
+        public const string Position = "Position";
+        public const string PositionInd = "Position Index";
+        public const string PositionCr = "Position Create";
+        public const string PositionEd = "Position Edit";
+        public const string PositionDel = "Position Delete";
+        public const string PositionDet = "Position Details";
     }
 }

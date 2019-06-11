@@ -10,11 +10,11 @@ namespace DeliveryApp.Mapping.Implementation
 {
     public class PositionMappingService : MappingService<Position, PositionEntity>, IPositionMappingService
     {
-        //private readonly IRoleMappingService _roleMappingService;
-        //public PositionMappingService(IRoleMappingService roleMappingService)
-        //{
-        //    _roleMappingService = roleMappingService ?? throw new ArgumentNullException(nameof(roleMappingService));
-        //}
+        private readonly IRoleMappingService _roleMappingService;
+        public PositionMappingService(IRoleMappingService roleMappingService)
+        {
+            _roleMappingService = roleMappingService ?? throw new ArgumentNullException(nameof(roleMappingService));
+        }
         public override PositionEntity DtoToEntity(Position dto)
         {
             if (dto == null)
@@ -30,13 +30,13 @@ namespace DeliveryApp.Mapping.Implementation
                 Title=dto.Title,
             };
 
-            //List<RoleEntity> roleEntities = new List<RoleEntity>();
-            //foreach (Role r in dto.Role)
-            //{
-            //    roleEntities.Add(_roleMappingService.DtoToEntity(r));
-            //}
+            List<RoleEntity> roleEntities = new List<RoleEntity>();
+            foreach (Role r in dto.Role)
+            {
+                roleEntities.Add(_roleMappingService.DtoToEntity(r));
+            }
 
-            //entity.RoleEntity = roleEntities;
+            entity.RoleEntity = roleEntities;
             
             return entity;
         }
@@ -51,13 +51,13 @@ namespace DeliveryApp.Mapping.Implementation
                 Title=entity.Title
             };
 
-            //List<Role> roleDtos = new List<Role>();
-            //foreach (RoleEntity r in entity.RoleEntity)
-            //{
-            //    roleDtos.Add(_roleMappingService.EntityToDto(r));
-            //}
+            List<Role> roleDtos = new List<Role>();
+            foreach (RoleEntity r in entity.RoleEntity)
+            {
+                roleDtos.Add(_roleMappingService.EntityToDto(r));
+            }
 
-            //dto.Role = roleDtos;
+            dto.Role = roleDtos;
 
             return dto;
         }

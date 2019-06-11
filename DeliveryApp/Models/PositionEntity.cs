@@ -12,6 +12,6 @@ namespace DeliveryApp.Models
         public string Description { get; set; }
         [DefaultValue(10)]
         public double Order { get; set; } = 10;
-        //public virtual ICollection<RoleEntity> RoleEntity { get; set; } = new List<RoleEntity>();
+        public virtual ICollection<RoleEntity> RoleEntity { get; set; } = new List<RoleEntity>();
     }
 }

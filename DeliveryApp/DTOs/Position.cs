@@ -12,6 +12,6 @@ namespace DeliveryApp.DTOs
         public string Description { get; set; }
         [DefaultValue(10)]
         public double Order { get; set; } = 10;
-       // public virtual ICollection<Role> Role { get; set; } = new List<Role>();
+        public virtual ICollection<Role> Role { get; set; } = new List<Role>();
     }
 }

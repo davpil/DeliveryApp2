@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { NavMenu } from './NavMenu';
-import DynamicMenu from './DynamicMenu/DynamicMenuIndex';
+import DynamicMenuIndex from './DynamicMenu/DynamicMenuIndex';
 
 export class Layout extends Component {
   static displayName = Layout.name;
@@ -9,12 +9,10 @@ export class Layout extends Component {
   render () {
     return (
         <div>
- 
                     <NavMenu />
-
             <Container>
             <Row>
-                <Col xs="3"><DynamicMenu/></Col>
+                    <Col xs="3"><DynamicMenuIndex/></Col>
                 <Col xs="9">{this.props.children}</Col>   
             </Row>
             </Container>

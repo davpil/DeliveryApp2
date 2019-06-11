@@ -77,6 +77,7 @@ export default class DynamicMenu extends Component {
 
         return (
             <div>
+                <Link to={`/Role/RoleIndex`} >Role</Link>
                 <ul className="item-list list-group">
                     {items}
                 </ul>

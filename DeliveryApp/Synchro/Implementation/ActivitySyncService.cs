@@ -54,6 +54,15 @@ namespace DeliveryApp.Synchro.Implementation
                         new ActivityEntity { ID = ActivityNames.EmployeeDet, Order = ord++},
                     }
                 },
+                 new ActivityEntity{ ID = ActivityNames.Position, Order = 1,
+                    Children = new List<ActivityEntity>{
+                        new ActivityEntity { ID = ActivityNames.PositionInd, Order = (ord = 1)},
+                        new ActivityEntity { ID = ActivityNames.PositionCr,  Order = ord++},
+                        new ActivityEntity { ID = ActivityNames.PositionEd,  Order = ord++},
+                        new ActivityEntity { ID = ActivityNames.PositionDel, Order = ord++},
+                        new ActivityEntity { ID = ActivityNames.PositionDet, Order = ord++},
+                    }
+                },
             };
 
             return acts;
